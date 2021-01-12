@@ -7,4 +7,10 @@
       - curl
     state: latest
 
+- name: Install vim
+  package:
+    name: vim
+    state: present
+
+
 
