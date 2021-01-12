@@ -20,4 +20,4 @@ molecule:
     - ansible --version
     - molecule --version
   script:
-    - cd roles/testrole && molecule test
+    - cd roles/gitlab-ci-test && molecule test
