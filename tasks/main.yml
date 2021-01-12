@@ -1,2 +1,8 @@
 ---
 # tasks file for gitlab-ci-test
+- name: Install wget and curl
+  package:
+    name:
+      - wget
+      - curl
+    state: latest
