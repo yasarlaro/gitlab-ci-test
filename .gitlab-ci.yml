@@ -1,0 +1,18 @@
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - mkdir build
+    - cd build
+    - echo "onur yasarlar" > test.out  
+  artifacts:
+    paths:
+      - build/
+
+test:
+  stage: test
+  script:
+    - grep -iq "onur" build/test.out
