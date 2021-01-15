@@ -6,7 +6,7 @@ build:
   stage: build
   script:
     - ip a
-    - apt install wget -a
+    - apt install wget -y
     - cat /etc/*release
     - hostname
     - date
