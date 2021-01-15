@@ -4,12 +4,12 @@ stages:
 
 build:
   stage: build
-  scripts:
+  script:
     - mkdir /tmp/deneme
     - cd /tmp/deneme
     - echo "Onur Yasarlar" > /tmp/deneme
 
 test:
   stage: test
-  scripts:
+  script:
     - echo "testing custom runner"
