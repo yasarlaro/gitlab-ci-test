@@ -1,21 +1,15 @@
----
-image: docker:stable-dind
+stages:
+  - build
+  - test
 
-services:
-  - docker:dind
+build:
+  stage: build
+  scripts:
+    - mkdir /tmp/deneme
+    - cd /tmp/deneme
+    - echo "Onur Yasarlar" > /tmp/deneme
 
-before_script:
-  - apk add --no-cache
-    python3 python3-dev py3-pip gcc git curl build-base
-    autoconf automake py3-cryptography linux-headers
-    musl-dev libffi-dev openssl-dev openssh
-  - docker info
-  - python3 --version
-  - python3 -m pip install ansible molecule[docker]
-  - ansible --version
-  - molecule --version
-
-molecule:
+test:
   stage: test
-  script:
-    - cd roles/gitlab-ci-test && molecule test
+  scripts:
+    - echo "testing custom runner"
