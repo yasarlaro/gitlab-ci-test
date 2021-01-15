@@ -5,12 +5,12 @@ stages:
 build:
   stage: build
   script:
-    - ip a
-    - sudo yum install wget -y
-    - cat /etc/*release
-    - hostname
-    - date
-    - pwd
+    - /usr/sbin/ip addr show
+    - /usr/bin/sudo yum install wget -y
+    - /usr/bin/cat /etc/*release
+    - /usr/bin/hostname
+    - /usr/bin/date
+    - /usr/bin/pwd
 
 test:
   stage: test
