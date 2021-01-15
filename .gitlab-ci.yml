@@ -7,7 +7,7 @@ build:
   script:
     - mkdir /tmp/deneme
     - cd /tmp/deneme
-    - echo "Onur Yasarlar" > /tmp/deneme
+    - echo "Onur Yasarlar" > /tmp/deneme/test.out
 
 test:
   stage: test
